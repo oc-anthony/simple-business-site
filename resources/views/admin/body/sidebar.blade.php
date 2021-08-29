@@ -40,32 +40,32 @@
                         <div class="sub-menu">
 
                             <li  class="active" >
-                                <a class="sidenav-item-link" href="">
+                                <a class="sidenav-item-link" href="{{ route('all.slider') }}">
                                     <span class="nav-text">Slider</span>
                                 </a>
                             </li>
 
                             <li>
                                 <a class="sidenav-item-link" href="">
-                                <span class="nav-text">About</span>
+                                    <span class="nav-text">About</span>
                                 </a>
                             </li>
 
                             <li>
                                 <a class="sidenav-item-link" href="">
-                                <span class="nav-text">Portfolio</span>
+                                    <span class="nav-text">Portfolio</span>
                                 </a>
                             </li>
 
                             <li>
                                 <a class="sidenav-item-link" href="">
-                                <span class="nav-text">Brand</span>
+                                    <span class="nav-text">Brand</span>
                                 </a>
                             </li>
 
                             <li>
                                 <a class="sidenav-item-link" href="">
-                                <span class="nav-text">Category</span>
+                                    <span class="nav-text">Category</span>
                                 </a>
                             </li>
                         </div>
