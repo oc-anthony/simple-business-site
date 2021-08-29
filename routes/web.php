@@ -32,3 +32,14 @@ Route::post('/slider/store', [SliderController::class, 'StoreSlider'])->name('st
 Route::get('/slider/edit/{id}', [SliderController::class, 'Edit']);
 Route::post('/slider/update/{id}', [SliderController::class, 'Update']);
 Route::get('/slider/delete/{id}', [SliderController::class, 'Delete']);
+
+
+# category routes
+
+Route::get('/category/all', [CategoryController::class, 'Categories'])->name('all.category');
+Route::post('/category/add', [CategoryController::class, 'AddCat'])->name('add.category');
+Route::get('/category/edit/{id}', [CategoryController::class, 'Edit']);
+Route::post('/category/update/{id}', [CategoryController::class, 'Update']);
+Route::get('/softdelete/category/{id}', [CategoryController::class, 'SoftDelete']);
+Route::get('/category/restore/{id}', [CategoryController::class, 'Restore']);
+Route::get('/category/delete/{id}', [CategoryController::class, 'Delete']);

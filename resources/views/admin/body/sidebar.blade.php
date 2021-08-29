@@ -64,7 +64,7 @@
                             </li>
 
                             <li>
-                                <a class="sidenav-item-link" href="">
+                                <a class="sidenav-item-link" href="{{ route('all.category') }}">
                                     <span class="nav-text">Category</span>
                                 </a>
                             </li>
