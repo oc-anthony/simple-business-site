@@ -83,7 +83,7 @@
                         <div class="sub-menu">
 
                             <li>
-                                <a class="sidenav-item-link" href="">
+                                <a class="sidenav-item-link" href="{{ route('contact.profile') }}">
                                 <span class="nav-text">Profile</span>
                                 </a>
                             </li>

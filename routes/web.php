@@ -3,6 +3,7 @@
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\SliderController;
 use Illuminate\Support\Facades\Route;
@@ -68,3 +69,12 @@ Route::get('/about/delete/{id}', [AboutController::class, 'Delete']);
 
 Route::get('/multi/image', [PortfolioController::class, 'MultiPic'])->name('multi.pic');
 Route::post('/portfolio/add', [PortfolioController::class, 'AddImages'])->name('store.images');
+
+# contact routes
+
+Route::get('/contact/profile', [ContactController::class, 'ContactProfile'])->name('contact.profile');
+Route::get('/contact/add', [ContactController::class, 'AddContact'])->name('add.contact');
+Route::post('/contact/store', [ContactController::class, 'StoreContact'])->name('store.contact');
+Route::get('contact/edit/{id}', [ContactController::class, 'Edit']);
+Route::post('contact/update/{id}', [ContactController::class, 'Update']);
+Route::get('contact/delete/{id}', [ContactController::class, 'Delete']);
