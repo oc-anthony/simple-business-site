@@ -52,7 +52,7 @@
                             </li>
 
                             <li>
-                                <a class="sidenav-item-link" href="">
+                                <a class="sidenav-item-link" href="{{ route('multi.pic') }}">
                                     <span class="nav-text">Portfolio</span>
                                 </a>
                             </li>
