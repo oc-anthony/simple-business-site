@@ -44,7 +44,12 @@ class SliderController extends Controller
         $slider->image = $last_img;
         $slider->save();
 
-        return Redirect()->route('all.slider')->with('success', 'Slider inserted successfully');
+        $notification = array(
+            'message' => 'Slider inserted successfully',
+            'alert-type' => 'success'
+        );
+
+        return Redirect()->route('all.slider')->with($notification);
     }
 
     public function Edit($id) {
@@ -72,7 +77,13 @@ class SliderController extends Controller
             'image' => $last_img,
             'created_at' => Carbon::now()
         ]);
-        return Redirect()->route('all.slider')->with('success', 'Slider updated successfully');
+
+        $notification = array(
+            'message' => 'Slider updated successfully',
+            'alert-type' => 'success'
+        );
+
+        return Redirect()->route('all.slider')->with($notification);
     }
 
     public function Delete($id) {
@@ -81,6 +92,10 @@ class SliderController extends Controller
         unlink($old_image);
 
         Slider::find($id)->delete();
-        return Redirect()->back()->with('success', 'Slider deleted successfully');
+        $notification = array(
+            'message' => 'Slider deleted successfully',
+            'alert-type' => 'success'
+        );
+        return Redirect()->back()->with($notification);
     }
 }

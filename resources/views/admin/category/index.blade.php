@@ -7,13 +7,6 @@
         <div class="row">
             <div class="col-md-12">
                 <br>
-                @if(session('success'))
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        <strong>{{ session('success') }}</strong>
-                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    </div>
-                @endif
-                <br>
                 <div class="card">
                     <div class="card-header">All Categories</div>
                     <table class="table">

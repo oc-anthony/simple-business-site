@@ -12,16 +12,6 @@
                         <a href="{{ route('add.slider') }}"><button class="btn btn-info">Add Slider</button> </a>
                     </div>
                     <br>
-                    @if(session('success'))
-                        <div class="alert alert-success alert-dismissible fade show" role="alert">
-                            <strong>{{ session('success') }}</strong>
-                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                        </div>
-                        @php
-                            Session::forget('success')
-                        @endphp
-                    @endif
-                    <br>
                     <div class="card">
                         <div class="card-header">All Sliders</div>
                         <table class="table">
