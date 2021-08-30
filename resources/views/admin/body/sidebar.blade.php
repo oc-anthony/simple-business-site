@@ -46,7 +46,7 @@
                             </li>
 
                             <li>
-                                <a class="sidenav-item-link" href="">
+                                <a class="sidenav-item-link" href="{{ route('all.about') }}">
                                     <span class="nav-text">About</span>
                                 </a>
                             </li>

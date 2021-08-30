@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\SliderController;
@@ -53,3 +54,10 @@ Route::get('/brand/edit/{id}', [BrandController::class, 'Edit']);
 Route::post('/brand/update/{id}', [BrandController::class, 'Update']);
 Route::get('/brand/delete/{id}', [BrandController::class, 'Delete']);
 
+# about routes
+Route::get('/about/all', [AboutController::class, 'About'])->name('all.about');
+Route::get('/about/add', [AboutController::class, 'AddAbout'])->name('add.about');
+Route::post('/about/store', [AboutController::class, 'StoreAbout'])->name('store.about');
+Route::get('/about/edit/{id}', [AboutController::class, 'Edit']);
+Route::post('/about/update/{id}', [AboutController::class, 'Update']);
+Route::get('/about/delete/{id}', [AboutController::class, 'Delete']);
