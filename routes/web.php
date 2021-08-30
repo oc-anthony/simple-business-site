@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\SliderController;
 use Illuminate\Support\Facades\Route;
@@ -43,3 +44,12 @@ Route::post('/category/update/{id}', [CategoryController::class, 'Update']);
 Route::get('/softdelete/category/{id}', [CategoryController::class, 'SoftDelete']);
 Route::get('/category/restore/{id}', [CategoryController::class, 'Restore']);
 Route::get('/category/delete/{id}', [CategoryController::class, 'Delete']);
+
+# brand routes
+
+Route::get('/brand/all', [BrandController::class, 'Brands'])->name('all.brand');
+Route::post('/brand/add', [BrandController::class, 'AddBrand'])->name('add.brand');
+Route::get('/brand/edit/{id}', [BrandController::class, 'Edit']);
+Route::post('/brand/update/{id}', [BrandController::class, 'Update']);
+Route::get('/brand/delete/{id}', [BrandController::class, 'Delete']);
+
