@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Contact;
+use App\Models\Message;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ContactController extends Controller
 {
@@ -89,5 +91,27 @@ class ContactController extends Controller
         );
 
         return Redirect()->back()->with($notification);
+    }
+
+    public function Messages() {
+        $messages = Message::all();
+        return view('admin.contact.messages', compact('messages'));
+    }
+
+    public function Contact() {
+        $contacts = DB::table('contacts')->first();
+        return view('pages.contact', compact('contacts'));
+    }
+
+    public function StoreMessage(Request $request) {
+        Message::insert([
+            'name' => $request->name,
+            'email' => $request->email,
+            'subject' => $request->subject,
+            'message' => $request->message,
+            'created_at' => Carbon::now()
+        ]);
+
+        return Redirect()->route('contact')->with('success', 'Your message sent successfully');
     }
 }

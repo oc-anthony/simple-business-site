@@ -84,3 +84,7 @@ Route::post('/contact/store', [ContactController::class, 'StoreContact'])->name(
 Route::get('contact/edit/{id}', [ContactController::class, 'Edit']);
 Route::post('contact/update/{id}', [ContactController::class, 'Update']);
 Route::get('contact/delete/{id}', [ContactController::class, 'Delete']);
+
+Route::get('/contact', [ContactController::class, 'Contact'])->name('contact');
+Route::get('/contact/messages', [ContactController::class, 'Messages'])->name('contact.messages');
+Route::post('/contact/form', [ContactController::class, 'StoreMessage'])->name('store.message');

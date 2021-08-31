@@ -89,7 +89,7 @@
                             </li>
 
                             <li>
-                                <a class="sidenav-item-link" href="">
+                                <a class="sidenav-item-link" href="{{ route('contact.messages') }}">
                                 <span class="nav-text">Message</span>
                                 </a>
                             </li>
