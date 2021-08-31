@@ -145,16 +145,10 @@
                                 </li>
 
                                 <li>
-{{--                                    <a href="{{ route('change.profile') }}">--}}
-                                        <a href=""></a>
-                                        <i class="mdi mdi-account"></i> My Profile
-                                    </a>
+                                    <a href="{{ route('change.profile') }}"><i class="mdi mdi-account"></i> My Profile</a>
                                 </li>
                                 <li>
-{{--                                    <a href="{{ route('change.password') }}">--}}
-                                        <a href=""></a>
-                                        <i class="mdi mdi-email"></i> Change Password
-                                    </a>
+                                    <a href="{{ route('change.password') }}"><i class="mdi mdi-email"></i> Change Password</a>
                                 </li>
                                 <li>
                                     <a href="#"> <i class="mdi mdi-diamond-stone"></i> Projects </a>
@@ -165,7 +159,6 @@
 
                                 <li class="dropdown-footer">
                                     <a href=""> </a>
-{{--                                    <a href="{{ route('user.logout') }}"> <i class="mdi mdi-logout"></i> Log Out </a>--}}
                                 </li>
                             </ul>
                         </li>

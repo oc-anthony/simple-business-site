@@ -5,6 +5,7 @@ use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PortfolioController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SliderController;
 use App\Models\MultiPic;
 use Illuminate\Support\Facades\DB;
@@ -88,3 +89,9 @@ Route::get('contact/delete/{id}', [ContactController::class, 'Delete']);
 Route::get('/contact', [ContactController::class, 'Contact'])->name('contact');
 Route::get('/contact/messages', [ContactController::class, 'Messages'])->name('contact.messages');
 Route::post('/contact/form', [ContactController::class, 'StoreMessage'])->name('store.message');
+
+# user profile
+Route::get('/user/profile', [ProfileController::class, 'Profile'])->name('change.profile');
+Route::post('/profile/update', [ProfileController::class, 'UpdateProfile'])->name('update.profile');
+Route::get('/user/password', [ProfileController::class, 'ChangePassword'])->name('change.password');
+Route::post('/password/update', [ProfileController::class, 'UpdatePassword'])->name('update.password');
