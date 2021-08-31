@@ -6,6 +6,8 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\SliderController;
+use App\Models\MultiPic;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,7 +22,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $brands = DB::table('brands')->get();
+    $about = DB::table('abouts')->first();
+    $images = Multipic::all();
+    return view('home', compact('brands', 'about', 'images'));
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
@@ -69,6 +74,7 @@ Route::get('/about/delete/{id}', [AboutController::class, 'Delete']);
 
 Route::get('/multi/image', [PortfolioController::class, 'MultiPic'])->name('multi.pic');
 Route::post('/portfolio/add', [PortfolioController::class, 'AddImages'])->name('store.images');
+Route::get('/portfolio', [PortfolioController::class, 'Portfolio'])->name('portfolio');
 
 # contact routes
 

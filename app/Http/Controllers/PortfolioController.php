@@ -45,5 +45,8 @@ class PortfolioController extends Controller
         return Redirect()->back()->with($notification);
     }
 
-
+    public function Portfolio() {
+        $images = MultiPic::all();
+        return view('pages.portfolio', compact('images'));
+    }
 }
