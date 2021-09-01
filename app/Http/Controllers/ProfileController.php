@@ -9,6 +9,10 @@ use Illuminate\Support\Facades\Hash;
 
 class ProfileController extends Controller
 {
+    public function __construct() {
+        $this->middleware('auth');
+    }
+
     public function Profile() {
         if(Auth::user()) {
             $user = User::find(Auth::user()->id);

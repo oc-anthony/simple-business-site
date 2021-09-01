@@ -9,6 +9,10 @@ use Intervention\Image\Facades\Image;
 
 class PortfolioController extends Controller
 {
+    public function __construct() {
+        $this->middleware('auth');
+    }
+
     public function MultiPic() {
         $images = MultiPic::all();
         return view('admin.portfolio.index', compact('images'));

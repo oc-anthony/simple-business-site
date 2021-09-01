@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 
 class AboutController extends Controller
 {
+    public function __construct() {
+        $this->middleware('auth');
+    }
+
     public function About() {
         $abouts = About::latest()->get();
         return view('admin.about.index', compact('abouts'));
